@@ -16,14 +16,32 @@ extern "C" {
 }
 
 #[wasm_bindgen]
-pub fn day_1(input: &str) -> Vec<JsValue> {
+pub fn day_1(input: &str) -> Vec<i32> {
     let results = days::day_01::main(input);
     ctx_log(&format!("Logging! {:?}", results));
-    vec![results.0.into(), results.1.into()]
+    vec![results.0 as _, results.1 as _]
 }
 
 #[wasm_bindgen]
-pub fn day_2(input: &str) -> Vec<JsValue> {
+pub fn day_2(input: &str) -> Vec<i32> {
     let results = days::day_02::main(input);
+    vec![results.0 as _, results.1 as _]
+}
+
+#[wasm_bindgen]
+pub fn day_3(input: &str) -> Vec<i32> {
+    let results = days::day_03::main(input);
+    vec![results.0 as _, results.1 as _]
+}
+
+#[wasm_bindgen]
+pub fn day_4(input: &str) -> Vec<i32> {
+    let results = days::day_04::main(input);
+    vec![results.0 as _, results.1 as _]
+}
+
+#[wasm_bindgen]
+pub fn day_5(input: &str) -> Vec<JsValue> {
+    let results = days::day_05::main(input);
     vec![results.0.into(), results.1.into()]
 }

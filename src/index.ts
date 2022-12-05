@@ -7,7 +7,7 @@ global.log = console.log;
 
 const actions = {};
 
-const COMPLETED_DAYS = 2;
+const COMPLETED_DAYS = 5;
 
 for (let i = 1; i <= COMPLETED_DAYS; i++) {
   actions[`day_${i}`] = async () => {
